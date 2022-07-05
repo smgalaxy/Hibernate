@@ -6,7 +6,7 @@ public class Laptops {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int lapId;
     private String lapName;
-    //One laptop for many students
+    //Many laptop for a student
     @ManyToOne
     @JoinColumn(name = "student_rollno")
     private Students student;
