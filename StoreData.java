@@ -3,9 +3,7 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,14 +42,14 @@ public class StoreData {
         student1.setName("Peter");
         student1.setLaptops(laptopList);
 
-        lap1.setStudents(student1);
+        lap1.setStudent(student1);
 
 //        Students student2 = new Students();
 //        student2.setRollNo(222);
 //        student2.setName("Priya");
 //        student2.setLaptops(laptopList);
 
-        lap2.setStudents(student1);
+        lap2.setStudent(student1);
 
 //        session.save(lap1);
 //        session.save(lap2);

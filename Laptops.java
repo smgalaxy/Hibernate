@@ -1,6 +1,4 @@
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Laptops {
@@ -10,7 +8,8 @@ public class Laptops {
     private String lapName;
     //One laptop for many students
     @ManyToOne
-    private Students students;
+    @JoinColumn(name = "student_rollno")
+    private Students student;
 
 //    public List<Students> getStudents() {
 //        return students;
@@ -20,12 +19,12 @@ public class Laptops {
 //        this.students = students;
 //    }
 //
-    public Students getStudents() {
-        return students;
+    public Students getStudent() {
+        return student;
     }
 
-    public void setStudents(Students students) {
-        this.students = students;
+    public void setStudent(Students student) {
+        this.student = student;
     }
 
     public int getLapId() {

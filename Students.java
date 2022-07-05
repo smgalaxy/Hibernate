@@ -9,7 +9,7 @@ public class Students {
     private int rollNo;
     private String name;
     //Many students share one laptop
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Laptops> laptops;
 
     public List<Laptops> getLaptops() {
